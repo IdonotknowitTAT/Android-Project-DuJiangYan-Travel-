@@ -1,5 +1,6 @@
 package com.example.finalhomework_lienyu;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -21,7 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener {
     private ListView broadcastListView;
     private View view;
     //从strings.xml中获取数据
@@ -31,7 +32,7 @@ public class HomeFragment extends Fragment {
     private MyPagerAdapter shufflingAdapter;
 
     //声明图片资源
-    int[] shufflingImgIds = new int[]{R.drawable.pic1, R.drawable.pic2, R.drawable.pic3};
+    int[] shufflingImgIds = new int[]{R.drawable.shuffling_pic1, R.drawable.shuffling_pic2, R.drawable.shuffling_pic3};
 
 
     @Override
@@ -49,6 +50,8 @@ public class HomeFragment extends Fragment {
         bcDateList = getResources().getStringArray(R.array.broadcastDate_list);
         viewPager_shuffling = view.findViewById(R.id.viewPager_shuffling);
         shufflingAdapter = new MyPagerAdapter(getActivity().getSupportFragmentManager());
+        view.findViewById(R.id.imageButton_overall).setOnClickListener(this::onClick);
+        view.findViewById(R.id.imageButton_knowjiuzhai).setOnClickListener(this::onClick);
 
         //设置轮播图viewPager_shuffling
         for(int i = 0; i < shufflingImgIds.length; i++){
@@ -56,6 +59,7 @@ public class HomeFragment extends Fragment {
         }
         viewPager_shuffling.setPageTransformer(true,new ZoomOutPageTransformer());
         viewPager_shuffling.setAdapter(shufflingAdapter);
+
 
 
 
@@ -81,4 +85,18 @@ public class HomeFragment extends Fragment {
     }
 
 
+    @Override
+    public void onClick(View v) {
+        Intent intent = null;
+        switch (v.getId()){
+            case R.id.imageButton_overall:
+                intent = new Intent(getContext(),OverAllActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.imageButton_knowjiuzhai:
+                intent = new Intent(getContext(),KnowJiuZhaiActivity.class);
+                startActivity(intent);
+                break;
+        }
+    }
 }

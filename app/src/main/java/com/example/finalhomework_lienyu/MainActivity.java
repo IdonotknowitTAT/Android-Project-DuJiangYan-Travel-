@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -17,7 +18,7 @@ import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private BottomNavigationView bottomNavigationView;
     private ViewPager viewPager;
 
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity{
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity{
         myPagerAdapter.addFragment(new HomeFragment());
         myPagerAdapter.addFragment(new ExploreFragment());
         myPagerAdapter.addFragment(new MineFragment());
+
         //设置ViewPager缓存，以免白屏
         viewPager.setOffscreenPageLimit(3);
         viewPager.setAdapter(myPagerAdapter);
@@ -79,5 +81,10 @@ public class MainActivity extends AppCompatActivity{
                 return true;
             }
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

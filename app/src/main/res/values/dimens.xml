@@ -4,4 +4,5 @@
     <dimen name="text_size_normal">14sp</dimen>
     <dimen name="text_size_large">16sp</dimen>
     <dimen name="text_size_xlarge">18sp</dimen>
+    <dimen name="home_ImgBtn_height">100dp</dimen>
 </resources>

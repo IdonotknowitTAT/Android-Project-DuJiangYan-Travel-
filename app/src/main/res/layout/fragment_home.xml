@@ -9,23 +9,76 @@
     tools:context=".HomeFragment">
 
     <!-- TODO:设置轮播图的进度条 -->
-    <FrameLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:layout_margin="10dp">
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewPager_shuffling"
+        android:layout_height="match_parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-        </androidx.viewpager.widget.ViewPager>
-    </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_margin="10dp">
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager_shuffling"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-    <ListView
-        android:id="@+id/listView_broadcast"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+                </androidx.viewpager.widget.ViewPager>
+            </FrameLayout>
+
+            <com.example.finalhomework_lienyu.modified_classes.MyListView
+                android:id="@+id/listView_broadcast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imageButton_overall"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_ImgBtn_height"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/imgbtnpic_overall"
+                    android:padding="0dp"
+                    android:scaleType="centerCrop"/>
+                <ImageButton
+                    android:id="@+id/imageButton_knowjiuzhai"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_ImgBtn_height"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/imgbtnpic_knowjiuzhai"
+                    android:padding="0dp"
+                    android:scaleType="centerCrop"/>
+                <ImageButton
+                    android:id="@+id/imageButton_ticketbook"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_ImgBtn_height"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/imgbtnpic_ticketbook"
+                    android:padding="0dp"
+                    android:scaleType="centerCrop"/>
+                <ImageButton
+                    android:id="@+id/imageButton_avtivities"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_ImgBtn_height"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/imgbtnpic_activities"
+                    android:padding="0dp"
+                    android:scaleType="centerCrop"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

@@ -18,7 +18,7 @@
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginRight="3dp"
             android:layout_gravity="center"
             app:srcCompat="@drawable/baseline_volume_down_24" />
@@ -28,7 +28,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:text="这是一条公告这是一条公告这是一条公告这是一条公告这是一条公告"
+            android:text="这是一条公告这是一条公告这是一条公告这是一条公告这是一条公告这是一条公告这是一条公告这是一条公告这是一条公告这是一条公"
+            android:gravity="center_vertical"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_normal" />
 
@@ -36,8 +37,7 @@
             android:id="@+id/textView_bc_date"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="right
-"
+            android:gravity="right"
             android:layout_weight="1"
             android:text="2023/04/05"
             android:textColor="@color/black"

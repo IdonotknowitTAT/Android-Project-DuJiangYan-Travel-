@@ -12,6 +12,16 @@
         android:theme="@style/Theme.FinalHomework_Lienyu"
         tools:targetApi="31">
         <activity
+            android:name=".KnowJiuZhaiActivity"
+            android:exported="false"
+            android:label="初识九寨沟"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".OverAllActivity"
+            android:exported="false"
+            android:label="九寨沟概况"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
