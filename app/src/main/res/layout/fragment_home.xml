@@ -8,27 +8,24 @@
     android:orientation="vertical"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
-
-    <TextView
-        android:id="@+id/textView"
+    <!-- TODO:设置轮播图的进度条 -->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="127dp"
-        android:text="Home" />
+        android:layout_height="180dp"
+        android:layout_margin="10dp">
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager_shuffling"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.viewpager.widget.ViewPager>
+    </FrameLayout>
 
     <ListView
         android:id="@+id/listView_broadcast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_home_24" />
-
 
 
 </LinearLayout>

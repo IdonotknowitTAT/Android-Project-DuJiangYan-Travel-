@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity{
         myPagerAdapter.addFragment(new HomeFragment());
         myPagerAdapter.addFragment(new ExploreFragment());
         myPagerAdapter.addFragment(new MineFragment());
-
-
+        //设置ViewPager缓存，以免白屏
+        viewPager.setOffscreenPageLimit(3);
         viewPager.setAdapter(myPagerAdapter);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
