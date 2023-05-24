@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FinalHomework_Lienyu</string>
+    <string name="home">首页</string>
+    <string name="explore">智游</string>
+    <string name="mine">我的</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="broadcase_list">
+        <item>请扩散！5月1日青城山-都江堰景区线上门票已约满</item>
+        <item>《五一嗨耍全攻略》来袭！一键get都江堰4大经典耍法，“特种...</item>
+        <item>走，上山采茶！漫山花海、遍野茶香......成都出发1h，拥...</item>
+    </string-array>
+</resources>
