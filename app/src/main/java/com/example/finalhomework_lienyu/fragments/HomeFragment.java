@@ -1,6 +1,7 @@
-package com.example.finalhomework_lienyu;
+package com.example.finalhomework_lienyu.fragments;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,9 +10,13 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.example.finalhomework_lienyu.KnowJiuZhaiActivity;
+import com.example.finalhomework_lienyu.OverAllActivity;
+import com.example.finalhomework_lienyu.R;
 import com.example.finalhomework_lienyu.modified_classes.MyPagerAdapter;
 import com.example.finalhomework_lienyu.modified_classes.ShufflingPicsFragment;
 import com.example.finalhomework_lienyu.modified_classes.ZoomOutPageTransformer;
@@ -60,9 +65,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         viewPager_shuffling.setPageTransformer(true,new ZoomOutPageTransformer());
         viewPager_shuffling.setAdapter(shufflingAdapter);
 
-
-
-
         //设置公告ListView
         //创建键值对列表
         List<Map<String,Object>> bcListItems = new ArrayList<Map<String,Object>>();
@@ -79,6 +81,31 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         SimpleAdapter bcAdapter = new SimpleAdapter(getContext(),bcListItems,R.layout.broadcast_item,new String[]{"bcContent","bcDate"},new int[]{R.id.textView_bc_content,R.id.textView_bc_date});
         broadcastListView.setAdapter(bcAdapter);//设置Adapter
 
+        broadcastListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String url;
+                Intent intent;
+                switch (position){
+                    case 0:
+                        url = "https://www.djy517.com/news-details.html?channelCode=lyzx&id=35588";
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        url = "https://www.djy517.com/news-details.html?channelCode=lyzx&id=35541";
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        url = "https://www.djy517.com/news-details.html?channelCode=lyzx&id=34036";
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                        startActivity(intent);
+                        break;
+                }
+            }
+        });
+
 
 
         return view;
@@ -90,11 +117,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         Intent intent = null;
         switch (v.getId()){
             case R.id.imageButton_overall:
-                intent = new Intent(getContext(),OverAllActivity.class);
+                intent = new Intent(getContext(), OverAllActivity.class);
                 startActivity(intent);
                 break;
             case R.id.imageButton_knowjiuzhai:
-                intent = new Intent(getContext(),KnowJiuZhaiActivity.class);
+                intent = new Intent(getContext(), KnowJiuZhaiActivity.class);
                 startActivity(intent);
                 break;
         }

@@ -2,16 +2,15 @@ package com.example.finalhomework_lienyu;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.finalhomework_lienyu.fragments.ExploreFragment;
+import com.example.finalhomework_lienyu.fragments.HomeFragment;
+import com.example.finalhomework_lienyu.fragments.MineFragment;
 import com.example.finalhomework_lienyu.modified_classes.MyPagerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;

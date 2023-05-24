@@ -1,4 +1,4 @@
-package com.example.finalhomework_lienyu;
+package com.example.finalhomework_lienyu.fragments;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.finalhomework_lienyu.R;
 
 
 public class ExploreFragment extends Fragment {
