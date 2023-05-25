@@ -4,12 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragments.MineFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Mine" />
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <com.example.finalhomework_lienyu.util_classes.RoundImageView
+            android:id="@+id/roundImageView_mine"
+            android:layout_width="140dp"
+            android:layout_height="135dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/textView_mine_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="未登录"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_xlarge" />
+
+        <TextView
+            android:id="@+id/textView_mine_userId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="用户账号"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small" />
+
+        <com.example.finalhomework_lienyu.util_classes.MyListView
+            android:id="@+id/listView_mine_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:entries="@array/mine_list_array" />
+
+    </LinearLayout>
+
 
 </LinearLayout>

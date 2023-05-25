@@ -2,16 +2,13 @@ package com.example.finalhomework_lienyu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
-import com.example.finalhomework_lienyu.modified_classes.MyDialog;
+import com.example.finalhomework_lienyu.util_classes.MyDialog;
 
 import java.util.ArrayList;
 import java.util.HashMap;

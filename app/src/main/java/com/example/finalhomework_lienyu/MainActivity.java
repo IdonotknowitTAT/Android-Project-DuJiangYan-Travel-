@@ -8,10 +8,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.finalhomework_lienyu.fragments.ExploreFragment;
+import com.example.finalhomework_lienyu.fragments.SmartTravelFragment;
 import com.example.finalhomework_lienyu.fragments.HomeFragment;
 import com.example.finalhomework_lienyu.fragments.MineFragment;
-import com.example.finalhomework_lienyu.modified_classes.MyPagerAdapter;
+import com.example.finalhomework_lienyu.util_classes.MyPagerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         viewPager = findViewById(R.id.ViewPager);
         myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
         myPagerAdapter.addFragment(new HomeFragment());
-        myPagerAdapter.addFragment(new ExploreFragment());
+        myPagerAdapter.addFragment(new SmartTravelFragment());
         myPagerAdapter.addFragment(new MineFragment());
 
         //设置ViewPager缓存，以免白屏

@@ -1,4 +1,4 @@
-package com.example.finalhomework_lienyu.modified_classes;
+package com.example.finalhomework_lienyu.util_classes;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
@@ -31,7 +31,7 @@ public class MyDialog extends Dialog {
 
         img.setImageResource(imgId);
         tv_title.setText(title);
-        tv_date.setText(date);
+            tv_date.setText(date);
         tv_content.setText(content);
 
         yes.setOnClickListener(new View.OnClickListener() {

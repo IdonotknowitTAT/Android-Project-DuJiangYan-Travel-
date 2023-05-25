@@ -12,6 +12,21 @@
         android:theme="@style/Theme.FinalHomework_Lienyu"
         tools:targetApi="31">
         <activity
+            android:name=".TicketActivity"
+            android:exported="false"
+            android:label="门票预定"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:label="登录账号"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".RegistryActivity"
+            android:exported="false"
+            android:label="注册账号"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".FunActivitiesActivity"
             android:exported="false"
             android:label="精彩活动"

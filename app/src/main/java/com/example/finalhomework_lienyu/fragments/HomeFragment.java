@@ -13,14 +13,14 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
 import com.example.finalhomework_lienyu.FunActivitiesActivity;
 import com.example.finalhomework_lienyu.KnowJiuZhaiActivity;
 import com.example.finalhomework_lienyu.OverAllActivity;
 import com.example.finalhomework_lienyu.R;
-import com.example.finalhomework_lienyu.modified_classes.MyPagerAdapter;
-import com.example.finalhomework_lienyu.modified_classes.ZoomOutPageTransformer;
+import com.example.finalhomework_lienyu.TicketActivity;
+import com.example.finalhomework_lienyu.util_classes.MyPagerAdapter;
+import com.example.finalhomework_lienyu.util_classes.ZoomOutPageTransformer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -132,6 +132,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             case R.id.imageButton_avtivities:
                 //精彩活动
                 intent = new Intent(getContext(), FunActivitiesActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.imageButton_ticketbook:
+                //预定门票
+                intent = new Intent(getContext(), TicketActivity.class);
                 startActivity(intent);
                 break;
         }

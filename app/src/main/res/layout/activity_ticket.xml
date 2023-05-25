@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TicketActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/imgbtnpic_ticketbook"
+        android:adjustViewBounds="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="购票日期"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_xlarge" />
+
+            <EditText
+                android:id="@+id/editText_ticket_Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="date" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="游览时间"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_xlarge" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_ticket_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton_am"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="上午" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_pm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="下午" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="购票类型"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_xlarge" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_ticket_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton_adult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="成人票" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_child"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="学生票" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="购票数量"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_xlarge" />
+
+            <EditText
+                android:id="@+id/editTextNumber_ticket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
+
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/textView_tickets_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_xlarge"
+            android:text="余票数量：??" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/button_ticket_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="购买门票" />
+
+</LinearLayout>
