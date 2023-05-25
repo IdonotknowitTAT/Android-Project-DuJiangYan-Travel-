@@ -12,10 +12,15 @@
         android:theme="@style/Theme.FinalHomework_Lienyu"
         tools:targetApi="31">
         <activity
+            android:name=".FunActivitiesActivity"
+            android:exported="false"
+            android:label="精彩活动"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".KnowJiuZhaiActivity"
             android:exported="false"
             android:label="初识九寨沟"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".OverAllActivity"
             android:exported="false"
@@ -26,6 +31,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

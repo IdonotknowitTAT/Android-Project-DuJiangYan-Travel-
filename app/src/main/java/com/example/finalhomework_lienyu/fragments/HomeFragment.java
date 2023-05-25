@@ -13,12 +13,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
+import com.example.finalhomework_lienyu.FunActivitiesActivity;
 import com.example.finalhomework_lienyu.KnowJiuZhaiActivity;
 import com.example.finalhomework_lienyu.OverAllActivity;
 import com.example.finalhomework_lienyu.R;
 import com.example.finalhomework_lienyu.modified_classes.MyPagerAdapter;
-import com.example.finalhomework_lienyu.modified_classes.ShufflingPicsFragment;
 import com.example.finalhomework_lienyu.modified_classes.ZoomOutPageTransformer;
 
 import java.util.ArrayList;
@@ -57,6 +58,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         shufflingAdapter = new MyPagerAdapter(getActivity().getSupportFragmentManager());
         view.findViewById(R.id.imageButton_overall).setOnClickListener(this::onClick);
         view.findViewById(R.id.imageButton_knowjiuzhai).setOnClickListener(this::onClick);
+        view.findViewById(R.id.imageButton_avtivities).setOnClickListener(this::onClick);
 
         //设置轮播图viewPager_shuffling
         for(int i = 0; i < shufflingImgIds.length; i++){
@@ -117,11 +119,19 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         Intent intent = null;
         switch (v.getId()){
             case R.id.imageButton_overall:
+                //九寨沟概况
                 intent = new Intent(getContext(), OverAllActivity.class);
                 startActivity(intent);
                 break;
             case R.id.imageButton_knowjiuzhai:
+                //初识九寨沟
                 intent = new Intent(getContext(), KnowJiuZhaiActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.imageButton_avtivities:
+                //精彩活动
+                intent = new Intent(getContext(), FunActivitiesActivity.class);
                 startActivity(intent);
                 break;
         }

@@ -60,6 +60,7 @@ public class KnowJiuZhaiActivity extends AppCompatActivity implements View.OnCli
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.know_jiu_zhai_itemlist,android.R.layout.simple_list_item_single_choice);
         listView.setAdapter(adapter);
+        listView.setItemChecked(0,true);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

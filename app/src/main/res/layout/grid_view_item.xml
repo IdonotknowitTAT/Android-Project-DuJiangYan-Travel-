@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView_grid_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/itempic_country_1"
+        android:layout_marginBottom="5dp"
+        android:adjustViewBounds="true"/>
+
+    <TextView
+        android:id="@+id/textView_grid_title"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:text="重阳登高去哪儿？都江堰这4个登高好去处，秋意正浓，全家出游上翠微~"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_xlarge" />
+
+    <TextView
+        android:id="@+id/textView_grid_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="活动时间：2018-10-15至2018-10-15" />
+</LinearLayout>

@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import com.example.finalhomework_lienyu.R;
 
 public class MineFragment extends Fragment {
+    public static boolean isLogged = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".modified_classes.ShufflingPicsFragment">
+    tools:context=".fragments.ShufflingPicsFragment">
 
     <ImageView
         android:id="@+id/imageView_shufflingItem"
