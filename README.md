@@ -1,4 +1,4 @@
-# FinalHomework_Lienyu
+# Android Project DuJiangYan Travel
 > 都江堰旅游app，安卓Java期末大作业罢
 A Student From SWPU. 文件结构有些乱，有空再整理吧
 因为这个月是考试周，所以之前一直在复习数据库、马原、计算机系统，这个安卓只用了两天来做，当然也两天没洗澡...
